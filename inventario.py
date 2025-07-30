@@ -17,6 +17,13 @@ def vista_inventario():
             print(f"- {item}: {cantidad}")
         print("---------------------------")
 
+def editar_inventario(nombre_item, nueva_cantidad):
+    if nombre_item in inventario:
+        inventario[nombre_item] = nueva_cantidad
+        print(f"Cantidad de '{nombre_item}' actualizada a {nueva_cantidad}.")
+    else:
+        print(f"Error: '{nombre_item}' no encontrado en el inventario.")
+
 def main():
     print("Sistema de Gestión de Inventario")
     agregar_item("Laptop", 10)
